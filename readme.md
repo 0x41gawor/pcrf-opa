@@ -98,7 +98,7 @@ OPA from these files generates packages and rules inside of the packages.
 #### Data
 To add data perform cURL HTTP request.
 ```curl
-curl --location --request PUT 'http://192.168.56.106:8181/v1/data/' \
+curl --location --request PUT 'http://192.168.56.106:8181/v1/data' \
 --header 'Content-Type: application/json' \
 --data '{
     "ims": {
@@ -130,7 +130,7 @@ allow_user if {
 ```curl
 curl --location --request PUT 'http://192.168.56.106:8181/v1/policies/ims' \
 --header 'Content-Type: text/plain' \
---data '```rego
+--data '
 package ims
 
 import rego.v1
